@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>William Wu</title>
+    <style>
+      /* Global overrides */
+      @font-face{
+        src:url("fonts/Chivo-Regular.ttf");
+        font-family:Chivo;
+      }
+      body{
+        font-family:Chivo, sans-serif;
+        background-color:#141414;/*eee;*/
+        color:#eee;/*141414;*/
+        margin:0 auto;
+        max-width:988px;
+        box-sizing:border-box;
+        border:16px solid transparent;
+        width:100%;
+        font-size:14px;
+        letter-spacing: 0.02em;
+        line-height: 1.5em;
+      }
+      h1 { font-size: 24px; }
+      h2 { font-size: 20px; }
+      h1, h2, h3{
+        font-weight:normal;
+        letter-spacing: 0.04em;
+      }
+      a{
+        text-decoration:none;
+        color:inherit;
+      }
+
+      /* Nav bar */
+      nav h1{
+        font-size: 18px;
+        display:inline-block;
+        padding:8px;
+        margin:0;
+        background-color:#222;
+        color:#ccc;
+        /*text-transform:uppercase;*/
+      }
+      nav a:hover h1{
+        background-color:#333;
+      }
+      nav a:active h1{
+        background-color:#bbb;
+        color:#333;
+      }
+      nav {
+        /*background-color:#222;*/
+        margin-bottom:16px;
+      }
+      /*nav, article{*/
+      /*}*/
+
+      /* Article Styling */
+      article{
+        /*text-align: justify*/
+        position:relative;
+        margin-bottom:48px;
+      }
+      .grouping{
+        column-count:2;
+        column-gap:24px;
+        position:relative;
+      }
+      .grouping.needspace{
+        padding:48px 0 0 0; /*16px 16px 16px;*/
+      }
+      .grouping>*:first-of-type{
+        margin-top:0;
+      }
+      .grouping>h1:first-child,.grouping>h2:first-child{
+        position:absolute;
+        top:16px;
+        left:0;
+        /*left:16px;*/
+        margin:0;
+      }
+      .grouping>h2:first-child{
+        top:0px;
+      }
+      article a.styled{
+        display:inline-block;
+        padding:2px 4px;
+        background-color:#333;
+      }
+      article a.styled:hover{
+        background-color:#555;
+      }
+      article a.styled:active{
+        background-color:#aaa;
+        color:#333;
+      }
+      article img{
+        width:100%;
+        height:auto;
+      }
+      article hr{
+        border-color:#555;
+        border-style: solid;
+        margin: 2em 0;
+      }
+      /*article>hr:first-of-type{*/
+      /*  break-after:column;*/
+      /*}*/
+      /* Project container */
+      #projects{
+        column-count:3;
+        column-gap:16px;
+        margin:-4px;
+      }
+      .project{
+        box-sizing: border-box;
+        border: 4px solid transparent;
+        /*background-color:#111;*/
+        width:100%;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        background-size: cover;
+        background-position: 50%;
+        display:inline-block;
+        margin-bottom:16px;
+      }
+
+      /* Project Tiles */
+      .project:hover{
+        border-color:#333;
+        background-color:#333;
+      }
+      .project:active{
+        border-color:#eee;
+        background-color:#eee;
+        color:#222;
+      }
+      .project summary{
+        margin:0;
+        padding:4px;
+        /*display:inline-block;*/
+      }
+      .project h3{
+        font-size:18px;
+        display:inline-block;
+        /*text-transform:uppercase;*/
+        margin:0;
+      }
+      .project time{
+        color:#888;
+        /*float:right;*/
+        /*font-weight:bold;*/
+        margin-left:8px;
+        display:inline-block;
+      }
+      .project img{
+        width:100%;
+        height:auto;
+      }
+      .project p{
+        margin:0;
+        color:#888;
+      }
+
+      /* Responsive */
+      @media (max-width:900px) {
+        .grouping{
+          column-count:1;
+        }
+        #projects{
+          column-count:2;
+        }
+      }
+      @media (max-width:500px) {
+        #projects{
+          column-count:1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav">
+      <a href="#"><h1>William Wu</h1></a>
+    </nav>
+    <!--<header id="greeter"></header>-->
+    <article id="article" style="display:none;"></article>
+    <section id="projects">
+      <project
+        name="E-Form"
+        date="Jun 2017"
+        desc="Expressive multitouch music controller."
+        ghpagesid="EForm"></project>
+      <project
+        name="Changes"
+        date="May 2017"
+        desc="Visualizing my code writing, across scales."
+        ghpagesid="Changes"></project>
+      <project
+        name="Emoji Game"
+        date="May 2017"
+        desc="A quick game made entirely of emoji."
+        ghpagesid="EmojiGame"></project>
+      <project
+        name="Poetry Generator"
+        date="Apr 2017"
+        desc="Poetic forms from procedural alphabets."
+        ghpagesid="PoetryGenerator"></project>
+      <project
+        name="Weather"
+        date="Feb 2017"
+        desc="Current conditions with and without text."
+        ghpagesid="Weather"></project>
+      <project
+        name="Six Clocks"
+        date="Feb 2017"
+        desc="Time, represented six ways."
+        ghpagesid="SixClocks"></project>
+      <project
+        name="I hope ..."
+        date="Feb 2017"
+        desc="Empathetic hopes in a digital poem."
+        ghpagesid="Hope"></project>
+      <project
+        name="Suspended Time"
+        date="Jan 2017"
+        desc="Student time use, visualized."
+        ghpagesid="SuspendedTime"></project>
+      <project
+        name="Active Weaving"
+        date="Jan 2017"
+        desc="Developing shape-changing textiles."
+        ghpagesid="ActiveWeaving"></project>
+      <project
+        name="Structure Editor"
+        date="Dec 2016"
+        desc="An editor for code, not text."
+        ghpagesid="StructureEditor"></project>
+      <project
+        name="MIT 2030"
+        date="Nov 2016"
+        desc="Concept art for a fictional future dorm."
+        ghpagesid="MIT2030"></project>
+      <project
+        name="Rune Logo"
+        date="Nov 2016"
+        desc="Rebranding an arts & literature journal."
+        ghpagesid="RuneLogo"></project>
+      <project
+        name="SonicPi Commander"
+        date="Oct 2016"
+        desc="Livecoding meets controller scripting."
+        ghpagesid="SonicPiCommander"></project>
+      <project
+        name="Strength In Numbers"
+        date="May 2016"
+        desc="Courtyard-spanning modular installation."
+        ghpagesid="StrengthInNumbers"></project>
+      <project
+        name="Mixer"
+        date="Mar 2016"
+        desc="Analog 8-channel music controller."
+        ghpagesid="Mixer"></project>
+      <project
+        name="Brittle Bits"
+        date="Feb 2016"
+        desc="Propagating error in bio-inspired code."
+        ghpagesid="BrittleBits"></project>
+      <project
+        name="Chair Reimagined"
+        date="Dec 2015"
+        desc="A kneeling chair for standing desks."
+        ghpagesid="ChairReimagined"></project>
+      <project
+        name="Laser + Sushi"
+        date="Nov 2015"
+        desc="A traditional dish with a modern twist."
+        ghpagesid="LaserSushi"></project>
+      <project
+        name="Quantum Forest"
+        date="Oct 2015"
+        desc="Explore an endless hand-drawn forest."
+        ghpagesid="QuantumForest"></project>
+      <project
+        name="Visual Exercise 1"
+        date="Sept 2015"
+        desc="Conceptualizing a spatial debugger."
+        ghpagesid="VisualExercise1"></project>
+      <project
+        name="Older Projects"
+        date="2012 to 2015"
+        desc="My personal website from late 2014."
+        ghpagesid="Site2015"
+        directlink="https://willy-vvu.github.io/Site2015/"></project>
+    </section>
+    <script>
+      /* Slimdown, but even more slim */
+      window.Slimdown = function(text,baseurl="") {
+        text='\n'+text+'\n';
+        Slimdown.rules.forEach(function(rule){text=text.replace(rule.regex,typeof rule.replacement=="function"?rule.replacement.bind(baseurl):rule.replacement);});
+        return text.trim();
+      };
+      Slimdown.rules=[
+        {regex:/!\[([^\[]*)\]\(([^\)]+)\)/g,replacement:function(text,g1,g2){return '<a target="_blank" href="'+(g2.indexOf("//")<0?this:"")+g2+'"><img src="'+(g2.indexOf("//")<0?this:"")+g2+'" alt="'+g1+'"></a>'}},
+        {regex:/\[([^\[]*)\]\(([^\)]+)\)/g,replacement:function(text,g1,g2){return '<a class="styled" target="_blank" href="'+(g2.indexOf("//")<0?this:"")+g2.replace("https://github.com/willy-vvu/","#")/*Replace cross-project links with internal ones*/+'">'+g1+'</a>'}},
+        {regex:/^(#+)(.*)/gm,replacement:function(text,chars,content){var level=chars.length;return'<h'+level+'>'+content.trim()+'</h'+level+'>';}},
+        {regex:/[\n\r]*(\*\*|__)(.*?)\1/g,replacement:'<strong>$2</strong>'},
+        {regex:/[\n\r]*(\*|_)(.*?)\1/g,replacement:'<em>$2</em>'},
+        {regex:/\~\~(.*?)\~\~/g,replacement:'<del>$1</del>'},
+        {regex:/\:\"(.*?)\"\:/g,replacement:'<q>$1</q>'},
+        {regex:/`(.*?)`/g,replacement:'<code>$1</code>'},
+        {regex:/\n\*(.*)/g,replacement:function(text,item){return'\n<ul>\n\t<li>'+item.trim()+'</li>\n</ul>';}},
+        {regex:/\n[0-9]+\.(.*)/g,replacement:function(text,item){return'\n<ol>\n\t<li>'+item.trim()+'</li>\n</ol>';}},
+        {regex:/\n(&gt;|\>)(.*)/g,replacement:function(text,tmp,item){return'\n<blockquote>'+item.trim()+'</blockquote>';}},
+        {regex:/\n-{3,}/g,replacement:'\n<hr>'},
+        {regex:/\n([^\n]+)\n/g,replacement:function(text,line){var trimmed=line.trim();if(/^<\/?(ul|ol|li|h|p|bl)/i.test(trimmed)){return'\n'+line+'\n';}return'\n<p>'+trimmed+'</p>\n';}},
+        {regex:/<\/ul>\s?<ul>/g,replacement:''},
+        {regex:/<\/ol>\s?<ol>/g,replacement:''},
+        {regex:/<\/blockquote><blockquote>/g,replacement:'\n'}
+      ];
+
+      window.request = function(url, callback){
+        var req = new XMLHttpRequest();
+        req.addEventListener("load", function(){callback(this.response)});
+        req.open("GET", url);
+        req.send();
+      }
+
+      projectIDs = [];
+      site2015IDs = ["smashlab", "voidgunner", "motemote", "singularity", "visualizer", "gridflow", "plasmid", "enviroinvasive", "essence", "ktbytegrader", "revealjs"];
+
+      function expand(project){
+        if(!project.getAttribute("directlink")){
+          projectIDs.push(project.getAttribute("ghpagesid"));
+        }
+        return '<a class="project" href="'+(project.getAttribute("directlink")?project.getAttribute("directlink")+'" target="_blank':('#'+project.getAttribute("ghpagesid")))+'" onclick="go(\''+project.getAttribute("ghpagesid")+'\')">'+
+          // '<img src="small/'+project.getAttribute("ghpagesid")+'.jpg"/>'+
+          '<img src="small/'+project.getAttribute("ghpagesid")+'.jpg"/>'+
+          '<summary>'+
+            '<h3>'+project.getAttribute("name")+'</h3>'+
+            '<time>'+project.getAttribute("date")+'</time>'+
+            '<p>'+project.getAttribute("desc")+'</p>'+
+          '</summary>'+
+        '</a>';
+      }
+
+      projects = document.getElementById("projects");
+      greeter = document.getElementById("greeter");
+      article = document.getElementById("article");
+
+      scrollOnReady = false;
+      function go(ghpagesid){
+        scrollOnReady = true;
+        // loadGhPages(ghpagesid);
+      }
+
+      function loadGhPages(ghpagesid){
+        request("https://willy-vvu.github.io/"+ghpagesid+"/README.md", function(data){
+          article.innerHTML = (s=Slimdown(data, "https://willy-vvu.github.io/"+ghpagesid+"/")).split("<hr>").map(function(grouping){var needspace = grouping.trim().startsWith("<h1")||grouping.trim().startsWith("<h2"); return '<div class="grouping'+(needspace?" needspace":"")+'">'+grouping+'</div>'}).join("<hr>");
+          article.style.display="initial";
+          if(scrollOnReady){
+            window.scroll(0,0);
+            scrollOnReady = false;
+          }
+        });
+      }
+
+      function checkHashAndLoad(){
+        var id = location.hash.slice(1);
+        if(projectIDs.indexOf(id) != -1){
+          loadGhPages(id);
+        } else if(site2015IDs.indexOf(id) != -1){
+          // Backwards compatibility
+          window.location = "https://willy-vvu.github.io/Site2015/#"+id;//,"_blank";
+        }
+        else {
+          article.style.display="none";
+          scrollOnReady = false;
+        }
+      }
+
+      function incrementProject(direction){
+        var id = location.hash.slice(1), index;
+        if((index = projectIDs.indexOf(id)) != -1){
+          window.location.hash="#"+projectIDs[Math.min(Math.max(index+(direction?1:-1),0),projectIDs.length-1)]||"";
+          scrollOnReady = true;
+        }
+      }
+
+      function init(){
+        projects.innerHTML = Array.from(projects.children).map(expand).join("");
+        checkHashAndLoad();
+        window.onhashchange = checkHashAndLoad;
+        window.onkeydown = function(event){
+          if(!(event.shiftKey||event.altKey||event.ctrlKey||event.metaKey)){
+            if(event.keyCode == 39 // -> Next
+            || event.keyCode == 74 // j
+            || event.keyCode == 78 // n
+            ){ incrementProject(true); }
+            if(event.keyCode == 37 // <- Prev
+            || event.keyCode == 75 // k
+            || event.keyCode == 80 // p
+            ){ incrementProject(false); }
+            if(event.keyCode == 27 // esc
+            ){ window.location.hash = "#"};
+          }
+        }
+      }
+
+      setTimeout(init,0);
+      </script>
+  </body>
+</html>
